@@ -70,7 +70,6 @@ mongoose.connect(mongoDB, options, (err) => {
   }
 });
 
-
 mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
 mongoose.set("useCreateIndex", true);
@@ -78,8 +77,8 @@ mongoose.set("useCreateIndex", true);
 app.use("/user", require("./Routes/user"));
 app.use("/community", require("./Routes/community"));
 app.use("/post", require("./Routes/post"));
-app.use("/chat", require('./Routes/chat'));
-app.use("/communityAnalytics", require('./Routes/communityAnalytics'));
+app.use("/chat", require("./Routes/chat"));
+app.use("/communityAnalytics", require("./Routes/communityAnalytics"));
 
 app.listen(3001, () => {
   console.log("Server listening on port 3001");
